@@ -9,6 +9,6 @@ class Genre < ActiveRecord::Base
     self.artists.length
   end
   def all_artist_names
-    self.artists
+    self.artists.map {|t| t.name}
   end
 end
