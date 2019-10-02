@@ -5,4 +5,13 @@ class Artist < ActiveRecord::Base
   def get_first_song
     self.songs.first
   end
+  def get_genre_of_first_song
+    self.songs.first.genre
+  end
+  def song_count
+    self.songs.size
+  end
+  def genre_count
+    self.genre.size
+  end
 end
